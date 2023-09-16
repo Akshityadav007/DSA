@@ -1,0 +1,14 @@
+1. Key pair(two sum)                                    -       Done
+2. Find Pivot Index                                     -       Done
+3. Missing Number                                       -       Done
+4. Remove Duplicates From Sorted Array                  -       Done
+5. Maximum Average Subarray 1                           -       Done
+6. Sort Colors                                          -       Done
+7. Moving all negative number to the left               -       Done
+8. Find Duplicate Number                                -       Done
+9. Missing Element from an array with Duplicates        -       Not Done
+10. Find first repeating number                         -       Done
+11. Common element in 3 sorted array                    -       Not Done
+12. Wave print a matrix                                 -       Not Done
+13. Spiral print a matrix                               -       Not Done
+14. Factorial of a large number                         -       Not Done
