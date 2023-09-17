@@ -4,10 +4,12 @@ using namespace std;
 // return dynamic array pointer
 int** transpose(int a[][4], int row, int col) {
   int** t = new int*[col];
+  // assign columns for every row
   for (int i = 0; i < col; i++) {
     t[i] = new int[row];
   }
 
+    // make the transpose matrix
   for (int i = 0; i < row; i++) {
     for (int j = 0; j < col; j++) {
       t[j][i] = a[i][j];
