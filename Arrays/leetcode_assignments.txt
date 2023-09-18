@@ -6,9 +6,9 @@
 6. Sort Colors                                          -       Done
 7. Moving all negative number to the left               -       Done
 8. Find Duplicate Number                                -       Done
-9. Missing Element from an array with Duplicates        -       Not Done    // not present on leetcode
+9. Missing Element from an array with Duplicates        -       Done    // not present on leetcode
 10. Find first repeating number                         -       Done
-11. Common element in 3 sorted array                    -       Not Done    // not present on leetcode  // present on coding ninjas
-12. Wave print a matrix                                 -       Not Done    // not present on leetcode
+11. Common element in 3 sorted array                    -       Done(not passed all cases)    // not present on leetcode  // present on coding ninjas
+12. Wave print a matrix                                 -       Done    // not present on leetcode
 13. Spiral print a matrix                               -       Done
-14. Factorial of a large number                         -       Not Done    // not present on leetcode
+14. Factorial of a large number                         -       Done    // not present on leetcode
