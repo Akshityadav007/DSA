@@ -8,6 +8,29 @@ void printArray(vector<int>& v){
     cout << endl;
 }
 
+void printRealArray(int a[],int n){
+    for(int i = 0;i < n;i++)
+    cout << a[i] << " ";
+    cout << endl;
+}
+
+int removeDuplicates(int a[],int n){
+        if(n < 2)
+        return n;
+        // to the left of j are all unique elements
+        int j = 0; 
+        for(int i = 0;i < n - 1;i++){
+            if(a[i]!=a[i + 1]){
+                a[j] = a[i];
+                j++;
+            }
+        }
+        // at the last element
+        a[j] = a[n - 1];
+        j++;
+        return j;
+    }
+
 // THIS QUESTION IS NOT PRESENT ON LEETCODE (NORMAL)
 
 
@@ -65,10 +88,15 @@ vector<int> findCommonElements(vector<int> &a, vector<int> &b, vector<int> &c)
 
 }
 
-// geeks for geeks (doesn't pass 2 cases)
+// geeks for geeks (doesn't pass 2 cases - because of duplicates)
 vector <int> commonElements (int A[], int B[], int C[], int n1, int n2, int n3){
     // answer array/vector
     vector<int> ans;
+
+    // remove all duplicates from arrays first - they get a new size (basically all elements after the new size are)
+    n1 = removeDuplicates(A,n1);
+    n2 = removeDuplicates(B,n2);
+    n3 = removeDuplicates(C,n3);
     
     // three pointer approach
     int i = 0,j = 0,k = 0;
@@ -76,15 +104,17 @@ vector <int> commonElements (int A[], int B[], int C[], int n1, int n2, int n3){
     while(i < n1 && j < n2 && k < n3){
         if(A[i] == B[j] && B[j] == C[k]){
             // if answer array is empty we can't check last element for duplicate
-            if(ans.empty()){
-                ans.push_back(A[i]);
-            }
-            else{
-                // taking care of duplicate elements
-                if(A[i]!=ans[ans.size() - 1]){
-                    ans.push_back(A[i]);
-                }
-            }
+            // the below code(to check duplicates) doesn't for for 2 unknows test cases on gfg therefore we need to first remove all duplicates from arrays and then do it
+            // if(ans.empty()){
+            //     ans.push_back(A[i]);
+            // }
+            // else{
+            //     // taking care of duplicate elements
+            //     if(A[i]!=ans[ans.size() - 1]){
+            //         ans.push_back(A[i]);
+            //     }
+            // }
+            ans.push_back(A[i]);
             i++;j++;k++;
         }
         else{
