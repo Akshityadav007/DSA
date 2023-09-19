@@ -8,7 +8,7 @@
 8. Find Duplicate Number                                -       Done
 9. Missing Element from an array with Duplicates        -       Done    // not present on leetcode
 10. Find first repeating number                         -       Done
-11. Common element in 3 sorted array                    -       Done(not passed all cases)    // not present on leetcode  // present on coding ninjas
+11. Common element in 3 sorted array                    -       Done    // not present on leetcode  // present on coding ninjas
 12. Wave print a matrix                                 -       Done    // not present on leetcode
 13. Spiral print a matrix                               -       Done
 14. Factorial of a large number                         -       Done    // not present on leetcode

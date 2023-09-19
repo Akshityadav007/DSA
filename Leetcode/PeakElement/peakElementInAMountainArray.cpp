@@ -1,6 +1,21 @@
 #include<iostream>
 using namespace std;
 
+/*
+    -> On ploting the array elements it appears like a mountain.
+    -> We need to get the peak element of it.
+
+    -> Just divide it in two parts:
+        - Part A = Increasing i.e. a[i] < a[i + 1]
+        - Part B = The Peak i.e. a[i] > a[i + 1] && a[i] > a[i - 1]
+        - Part C = Decreasing i.e. a[i] > a[i + 1]
+
+    -> There is common thing in Part B and Part C (a[i] > a[i + 1])
+        - Therefore we can club them together and solve the question.
+        - First Half - Part A and Second Half - (Peak + Part C).
+
+*/
+
 int peak(vector<int> &v){
     int n = v.size();
     int low = 0, high = n - 1;
