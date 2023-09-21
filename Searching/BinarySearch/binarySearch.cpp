@@ -6,19 +6,19 @@ using namespace std;
     *** CONDITION ***
     -> Array should be monotonic < mark the words >
 
-
 */
 
 
 int binarySearch(vector<int> &v,int n,int target){
     int low = 0,high = n - 1;
-    // there is a flaw in the below line
-    // int mid = (low + high) / 2;     // flaw is it is possible that 'low + high' might give an integer which is greater than range of 'int' i.e. 2^31 - 1. Then it can't be stored in the temporary buffer create by compiler.
-    
-    // either use this ↓
-    // int mid = (low / 2) + (high / 2);
-    // or
-    
+    /*
+        there is a flaw in the below line
+        int mid = (low + high) / 2;     // flaw is it is possible that 'low + high' might give an integer which is greater than range of 'int' i.e. 2^31 - 1. Then it can't be stored in the temporary buffer create by compiler.
+
+        either use this ↓
+        int mid = (low / 2) + (high / 2);
+        or
+    */
     // best practice ↓
     int mid = low + (high - low) / 2;
     while(low <= high){
@@ -55,3 +55,13 @@ int main(){
     else
     cout << "Element found at " << res << endl;
 }
+
+/*
+    Types of questions based on binary search:
+    1) Classical - no modification in algo
+    2) Search space
+    3) Predicate function
+    4) Index based
+
+
+*/
