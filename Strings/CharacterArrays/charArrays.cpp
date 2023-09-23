@@ -19,6 +19,9 @@ using namespace std;
 
     Termination     Terminated by size being out of range.      Terminated when '\0' i.e. null character ('\zero').
                                                                 (ASCII of null - 0).
+
+    Dynamic         Vector can be a Dynamic integer array.      Strings are dynamic character arrays.
+                    (Although vector takes any data type)                                                          
 -------------------------------------------------------------------------------------------------------------------
 
 
