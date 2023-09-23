@@ -17,8 +17,11 @@ using namespace std;
     Ouput           For loop is needed.                         No loop is needed, can print the array in
                                                                 one line.
 
-    Termination     Terminated by size being out of range.      Terminated when '\0' i.e. null character ('\zero').
-                                                                (ASCII of null - 0).
+    Termination     Terminated by size being out of range.      Also terminated by size being out of range but has 
+                                                                null character ('\zero') added after the last inserted
+                                                                element in array. So, termination can be triggered
+                                                                before end of array manually.
+                                                                #(ASCII of null - 0).
 
     Dynamic         Vector can be a Dynamic integer array.      Strings are dynamic character arrays.
                     (Although vector takes any data type)                                                          
