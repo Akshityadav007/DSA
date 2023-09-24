@@ -72,7 +72,7 @@ bool isAllocationFeasible(vector<int> &v,int mid,int students){
 int allocateMinimum(vector<int>& v,int m){
     int n = v.size();
 
-    // what if nuber of students to allocate 'm' are greater than the number of books 'n' to be allocated?
+    // what if number of students to allocate 'm' are greater than the number of books 'n' to be allocated?
     if(m > n)
     return -1;
 
