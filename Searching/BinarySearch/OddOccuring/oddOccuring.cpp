@@ -37,43 +37,43 @@ int findOddOccuring(vector<int>& v){
     int mid = low + (high - low) / 2;
 
     while(low <= high){
-        // for single element array
+        // got the answer
         if(low == high)
-            return low;
+            return low;     // or high
 
         // first check the postion of mid - even or odd
         
-        // mid at odd position
+        // mid at odd position, i.e. mid is not at v[mid] = answer (for sure)
         if(mid & 1){
             // two cases - part A  and part B
             // we can check mid - 1 because lowest odd index is 1
             if((mid > 0) && (v[mid] == v[mid - 1])){
-                // mid is present in part A
+                // mid is to the left of the answer
                 low = mid + 1;
             }
             else{
-                // mid is present in part B
+                // mid is to the right of the answer
                 high = mid - 1;
             }
         }
         // mid at even position
-        // Note: answer is present at even position, always
+        // Note: answer is present at even position, always, mid could be at v[mid] = answer
         else{
-            // two cases - part A  and part B
-            // here take care mid + 1 < n, because n - 1 is even always
+            // mid can be at 0 too, so we check +1 element
             if((mid + 1) < n && (v[mid] == v[mid + 1])){
-                // mid is in part A
-                low = mid + 2;
+                // mid is to the left of the answer
+                low = mid + 2; 
+                // +2 because the next element is the second number of this pair.
             }
             else{
-                // mid is in part B
+                // mid is to the right of the answer
                 high = mid;
                 // because what if mid is at the answer ? index will be lost if we do mid - 2 or mid - 1;  
             }
         }
 
         // update mid
-        mid = low + (high - low) / 2;
+        mid = low + (high - low) / 2;   // never reaches here because one single element is always present
 
     }
     return -1;
