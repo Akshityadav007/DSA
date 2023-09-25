@@ -2,6 +2,7 @@
 using namespace std;
 
 // Level: Hard (Geeksforgeeks)
+// I got to understand this by solving Leetcode 1011: https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 
 // Problem
 /*

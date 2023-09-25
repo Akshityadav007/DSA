@@ -62,7 +62,7 @@ int main(){
     cin >> precision;
     cout << "Square root upto 5 " << " decimal places for " << n << " is: " << squareRoot(n,precision) << endl;
     cout << "'cout' prints only upto 5 decimal places.\nHence, precise output is given by 'printf'" << endl;
-    printf("Square root upto  %d decimal places for %d is: %0.*f.\n", precision, n, precision, squareRoot(n, precision));
+    printf("Square root upto  %d decimal places for %d is: %0.*f.\n", precision, n, precision, squareRoot(n, precision));       // limit: upto 15 decimal places max
     // in the above code - '*' is used to define precision, can't use directly because 'precision' is not part of c++ library
     return 0;
 }
