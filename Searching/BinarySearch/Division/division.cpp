@@ -38,17 +38,15 @@ int divide(int divisor,int dividend){
     while(low <= high){
         // multiplication = mid * divisor
         int multiplication = mid * divisor;
-        if(multiplication == dividend)
-            return mid;
-        else if(multiplication > dividend){
-            // move left
-            high = mid - 1;
+        if(multiplication <= dividend){
+            // keep storing the nearest answer
+            ans = mid;
+            // move right
+            low = mid + 1;
         }
         else{
-            // move right on number line
-            low = mid + 1;
-            // store the possible nearest answer
-            ans = mid;
+            // move left
+            high = mid - 1;
         }
         // update mid (I forget this everytime)
         mid = low + (high - low) / 2;

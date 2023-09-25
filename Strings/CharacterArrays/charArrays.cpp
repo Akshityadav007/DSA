@@ -43,6 +43,8 @@ using namespace std;
     
     -> This is the reason 'character arrays' are efficient than 'strings'.
 
+    -> # Note: ALWAYS ENTER '0' AS THE LAST ELEMENT OF CHAR ARRAY. (TAKE +1 SIZE THAN REQUIRED FOR ADDING '0')
+
 */
 
 int main(){

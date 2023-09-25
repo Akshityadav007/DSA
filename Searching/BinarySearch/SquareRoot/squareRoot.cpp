@@ -1,3 +1,4 @@
+// path: Searching/BinarySearch/SquareRoot
 #include<iostream>
 using namespace std;
 
@@ -21,14 +22,13 @@ int squareRoot(int n){
     unsigned long long mid = low + (high - low) / 2;            // just because of temporary buffer that won't be able to store mid * mid
     while(low <= high){
         long long square = mid * mid;           // we need long long for storing value of square of this
-        if(square == n)
-            return mid;
-        else if(square > n)
-            high = mid - 1;
-        else{
-            ans = mid;              // this is used in case of fractional square roots. e.g. √68 = 8.xy 
+        if(square <= n){
+            ans = mid;
             low = mid + 1;
         }
+        else
+            high = mid - 1;
+
         // update mid
         mid = low + (high - low) / 2;
     }
