@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// # NOTE: BEFORE USING ANY IN-BUILT FUNCTION,  YOU SHOULD KNOW IT'S IMPLEMENTATION
+
 /*
 
     -> Strings are dynamic sequence of characters.
