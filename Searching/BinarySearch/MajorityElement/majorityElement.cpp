@@ -11,10 +11,16 @@ using namespace std;
 
 // Solution
 /*
+    # Method 1
     -> Sort the array.
     -> Get first and last occurrences for each element.
     -> Get the total count of occurrences of the element.
     -> Return the element whose total occurrence > n / 2.
+
+    # Method 2
+    -> Sort the array.
+    -> If an element occures more than n / 2 times, then we can be sure that on sorting it will be always be present at index = n / 2.
+    -> Hence return v[n / 2];
 */
 
 int firstOccurrence(vector<int> &v,int target){
@@ -53,7 +59,7 @@ int lastOccurrence(vector<int> &v,int target){
     return ans;
 }
 
-int majorityElement(vector<int>& nums) {
+int majorityElement1(vector<int>& nums) {
     sort(nums.begin(),nums.end());
     int n = nums.size();
     
@@ -65,6 +71,12 @@ int majorityElement(vector<int>& nums) {
     return -1;
 }
 
+int majorityElement2(vector<int>& nums) {
+    sort(nums.begin(),nums.end());
+    int n = nums.size();
+    return nums[n / 2];
+}
+
 int main(){
     vector<int> v;
     v.push_back(2);
@@ -73,7 +85,8 @@ int main(){
     v.push_back(2);
     v.push_back(2);
 
-    cout << majorityElement(v) << endl;
+    cout << majorityElement1(v) << endl;
+    cout << majorityElement2(v) << endl;
 
     return 0;
 }
