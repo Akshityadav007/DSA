@@ -36,10 +36,10 @@ int countSubstrings(string s){
     
     for(int i = 0;i < s.size();i++){
         // Count odd sized palindromic substrings
-        evenPalindromes += expand(s,i,i);
+        evenPalindromes += expand(s,i,i + 1);
 
         // Count even sized palindromic substrings
-        oddPalindromes += expand(s,i,i + 1);
+        oddPalindromes += expand(s,i,i);
     }
    
     // add both sized palindromes
