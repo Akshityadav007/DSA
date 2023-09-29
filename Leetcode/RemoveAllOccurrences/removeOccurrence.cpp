@@ -2,8 +2,13 @@
 //#include<string>
 using namespace std;
 
-// Leetcode : 1910
+// Problem || Leetcode : 1910
 // I gave brute force approach because I had not revised the 'string' code. So, didn't use library functions.
+
+/*
+    -> Given two strings s and part, perform the following operation on s until all occurrences of the substring part are removed:
+    -> Find the leftmost occurrence of the substring part and remove it from s.
+*/
 
 // Brute force - O(n^2) - Gives TLE
 string removeOccurrences(string s, string part) {
