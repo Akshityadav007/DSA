@@ -1,4 +1,6 @@
 #include<iostream>
+#include<map>
+#include<limits.h>
 using namespace std;
 
 // Problem  || Leetcode : 539
@@ -27,36 +29,27 @@ using namespace std;
     
 */
 
-vector<int> getHours(vector<string> &s){
-    vector<int> hrs;
-    for(int i = 0;i < s.size();i++){
-        int h = stoi(s[i].substr(0,2));
-        hrs.push_back(h);
+
+vector<int> getTime(vector<string> &st){
+    vector<int> res;
+    for(int i = 0;i < st.size();i++){
+        string time = st[i];
+        int hours = stoi(time.substr(0,2));
+        int minutes = stoi(time.substr(3,2));
+        int totalMinutes = (hours * 60) + minutes;
+        res.push_back(totalMinutes);
     }
-    return hrs;
+    return res;
 }
 
-vector<int> getMinutes(vector<string> &s){
-    vector<int> mins;
-    for(int i = 0;i < s.size();i++){
-        int m = stoi(s[i].substr(3,2));
-        mins.push_back(m);
-    }
-    return mins;
-}
-
-
-int antiClockWiseConvert(int hours, int minutes){
-    return ((24 - hours)* 60) + minutes;
-}
 
 int findMinDifference(vector<string> &s){
-    int minDiff = 0;
-
-
-    for(int i = 1;i < s.size();i++){
-
-    }
+    int minDiff = INT_MAX;
+    // get time in minutes
+    vector<int> time = getTime(s);              // shallow copy
+    // sort it
+    sort(time.begin(),time.end());
+    
 
     return minDiff;
 }
@@ -70,3 +63,5 @@ int main(){
 
     return 0;
 }
+
+// Still not working!
