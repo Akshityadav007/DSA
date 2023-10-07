@@ -10,9 +10,9 @@ Group Anagrams                                              Done
 Longest Palindromic substring                               Done
 Find the Index of the first Occurrence in a string          Done
 String to Integer(atoi)                                     Not Done
-String Compression                                          Not Done
+String Compression                                          Done
 Integer to Roman                                            Not Done
-Zig-zag Conversion                                          Not Done
+Zig-zag Conversion                                          Done
 Largest Number                                              Not Done
 Remove All Adjacent Duplicates In the String - 2            Not Done
 Implement std::string::erase()                              Done
