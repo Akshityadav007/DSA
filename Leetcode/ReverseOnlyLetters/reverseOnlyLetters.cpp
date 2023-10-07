@@ -11,8 +11,12 @@ using namespace std;
 
 // Solution
 /*
+    Method 1:
     -> We'll have one answer string in which first we'll store "non - english letters" at their rightful place.
     -> Then we'll simply reverse the string given.
+
+    Method 2: (In - place)
+    -> Reverse by swapping
 */
 
 string reverseOnlyLetters(string s) {

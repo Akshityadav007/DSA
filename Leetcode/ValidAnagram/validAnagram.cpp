@@ -11,7 +11,7 @@ using namespace std;
 // Solution
 /*
     -> Method 1 : Using library
-    -> Method 2 : Usnig mapping
+    -> Method 2 : Using mapping (frequency table)
 
     # It is pretty easy, so am not going to write the code, just think!
     
@@ -28,6 +28,28 @@ bool isAnagram(string s, string t) {
             else{
                 t[index] = 199;
             }
+        }
+        return true;
+}
+
+
+bool checkAnagram(string s1,string s2){
+        // let's make frequency table for s1
+        int freqTab1[300] = {0};
+        for(int i = 0;i < s1.size();i++){
+            freqTab1[s1[i]]++;
+        }
+
+        // let's make frequency Table for s2
+        int freqTab2[300] = {0};
+        for(int i = 0;i < s2.size();i++){
+            freqTab2[s2[i]]++;
+        }
+
+        // let's match both frequency tables
+        for(int i = 0;i < 300;i++){
+            if(freqTab1[i] != freqTab2[i])
+                return false;
         }
         return true;
 }
