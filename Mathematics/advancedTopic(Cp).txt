@@ -1,0 +1,11 @@
+Pigeon Hole
+Catalan Number (BST)
+Inclusion - Exclusion Principle
+Chinese Remainder Theorem
+Lucas' Theorem
+Fermat's Theorem
+Probability Concepts
+
+
+-- The above algo are for competitive coding.
+- Will do post completion of DSA.

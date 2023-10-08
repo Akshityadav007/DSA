@@ -17,4 +17,4 @@ Largest Number                                              Not Done
 Remove All Adjacent Duplicates In the String - 2            Not Done
 Implement std::string::erase()                              Done
 Minimum Time difference                                     Not Done
-Number of Laser Beams in a bank                             Not Done
+Number of Laser Beams in a bank                             Done
