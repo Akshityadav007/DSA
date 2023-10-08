@@ -1,2 +1,2 @@
 1) Algorithms to find a pattern in a string (along with T.C. and S.C.)
-    - <test>
+    - 
