@@ -1,0 +1,25 @@
+-> Pointer stores address of a variable.
+-> Note: IT WON'T STORE ANYTHING ELSE!. And this is the reason why pointers have a constant size(depending upon system architecture - 64 bits = 8bytes and for 34 bits = 4) irrespective of 'variable data type'.
+
+-> In actual memory the address is stored in hexadecimal format.
+
+-> Pointers with integer arrays - int arr[10];
+    - arr = &arr = &arr[0]
+    - *arr = arr[0]
+    - *(i + arr) = i[arr]   or      *(arr + i) = arr[i]
+    - 'arr' will always store the base address and is a constant.
+
+-> Pointers with character arrays   - char ch[100];
+    - As character arrays don't need loop to print them, on accessing the array with pointer it will print entire array and not the first character.
+    - ptr = ch, while printing both print same.
+    - *ptr = ch[0]
+    - Note: ptr = ch or ptr = &ch[0] 
+            and not ptr = &ch;           -- this will throw error.
+            Why?
+            # because 'ptr' in this case is declared as pointer to a single char, while 'ch' stores address of sequence of characters(multiple addresses).
+            # basically 'ch' acts as an iterator.
+
+-> Wild Pointers - Uninitialized or deleted pointer. This means the pointer doesn't point to a valid memory location.
+                 - Accessing a wild pointer can result to undefined behaviour.
+                 - Avoid deleting pointer that have not been allocated using 'new' operator (i.e. not present in heap memory).
+                 - Before deleting a pointer, make sure to point it to 'nullptr' to avoid accessing a wild pointer.

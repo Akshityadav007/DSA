@@ -24,26 +24,54 @@ using namespace std;
 */
 
 int countPrimesSieveOfEratosthenes(int n){
+    // to store ans
+    int ans = 0;
+    // For all other methods it gives TLE, hence we'll apply 'Sieve Of Eratoshtenes'
+    if(n == 0 || n == 1)
+        return false;
+    // let's make our sieve     -- mark all non primes
+    vector<bool> prime(n,true);      // initially mark all of them prime
+    prime[0] = prime[1] = false;            // 0 and 1 aren't prime
+
+    // let's store all primes and simultaneously mark all multiples of prime as non prime
+    for(int i = 2; i < n;i++){
+        // if it is a prime
+        if(prime[i]){
+            ans++;
+            // now mark all multiples of prime as false
+            int j = i + i;          // start from next multiple of 'i'
+            while(j < n){
+                prime[j] = false;
+                j = j + i;          // multiples of 'i'
+            }
+        }
+    }
+    return ans;
+}
+
+// a little improvised version
+int countPrimesSieveOfEratosthenes(int n){
     int ans = 0;        // to store the answer
     vector<bool> prime(n - 1,true);
     // mark 0 and 1 as false
     prime[0] = prime[1] = false;
 
     // let's mark the multiples of prime nos. as false and count primes
-    for(int i = 2;i < n - 1;i++){
+    for(int i = 2;i *i < n;i++){
         // if it is a prime number it will be marked as false
         if(prime[i]){
-            ans++;
-        }
-        int j = 2;
-        while(j < n){
-            prime[j] = false;
-            j = j + i;              // go to next multiple of 'i'
+            // if it is a prime, mark all it's multiples as false.
+            // all i * i multiples are already marked, so we move forth them
+            for(int j = i * i;i < n;j += i)
+                prime[j] = false;
         }
     }
+    // lastly count all of them
+    for(int i = 0;i < n;i++)
+        if(prime[i])
+            ans++;
     return ans;
 }
-
 
 int main(){
 
