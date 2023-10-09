@@ -40,6 +40,28 @@ void characterArray(){
     // This is bad because "Akshit" is stored in a temporary storage and the address of temp storage is assigned to cptrBad, hence it is a bad practice
 }
 
+// void pointers
+void voidPointers(){
+    void* vPtr;
+    int x = 10;
+    vPtr = &x;
+
+    // before using let's cast it to 'int'
+    int* intPtr = static_cast<int*>(vPtr);          // static_cast operator is a compile time operator that tells compiler to consider vPtr as pointer to 'int' data type
+    cout << *intPtr << endl;                        // this will print 10
+
+}
+
+// passing pointers
+// Passed by value
+void byValue(int* pValue){
+    pValue = pValue + 1;              // this doesn't modify main() pointer, a new pointer 'pValue' with a different address is created.
+}
+// Passed by reference
+void byReference(int* &pRef){
+    pRef = pRef + 1;              // this modifies main() pointer
+}
+
 int main(){
     // 1)
 
@@ -82,6 +104,34 @@ int main(){
 
     // 4)   Pointer to pointer
     int c = 3;
-    int *p5 = &c;
-    int **p6 = &p5;              // -> This is pointer to pointer which stores address pointer p5.
+
+    // declaration
+    int* p5 = &c;
+    int** p6 = &p5;              // -> This is pointer to pointer which stores address pointer p5.
+    int*** p7 = &p6;             // -> Pointer to -> a pointer to -> a pointer          .. and so on... 
+    /*
+        -> p7 stores address of p6 pointer
+        -> p6 stores address of p5 pointer
+        -> p5 stores address of c variable
+    */
+
+    // dereferencing
+    cout << p7 << endl;                             // p7 can be accessed with only p7
+    cout << *p7 << p6 << endl;                      // p6 can be accessed with *p7 (value stored in p7) and p6
+    cout << **p7 << *p6 << p5 << endl;              // p5 can be accessed with **p7 (value stored in *p7), *p6 (value stored in p6) and p5
+
+    cout << ***p7 << **p6 << *p5 << c << endl;      // c is accessed here
+
+
+    // Basically de - referencing is going to the address of stored value in the pointer and getting the stored value on that address
+
+
+    // passing to function
+    byValue(p5);
+    cout << p5 << endl;             // p5 is not modified
+    
+    byReference(p5);
+    cout << p5 << endl;             // p5 is modified
+
+
 }

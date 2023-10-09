@@ -4,22 +4,47 @@
 -> In actual memory the address is stored in hexadecimal format.
 
 -> Pointers with integer arrays - int arr[10];
-    - arr = &arr = &arr[0]
+    - arr = &arr = &arr[0]                  -- they all will return the base address of array (arr gives address of first number of array and &arr gives the starting address of the array of size 'n')
     - *arr = arr[0]
     - *(i + arr) = i[arr]   or      *(arr + i) = arr[i]
     - 'arr' will always store the base address and is a constant.
+    - Note: ptr = arr or ptr = &arr[0] 
+            and not ptr = &arr;           -- this will throw error.
+            Why?
+            # because 'ptr' in this case is declared as pointer to a single integer, and we are trying to assing it to array of integers(multiple addresses).
+            # basically 'arr' acts as an iterator.
+    - To create pointer to an integer array:
+        - int (*ptr)[n] = &arr;                 -- 'n' is the size of array, here ptr is made to point to the array.
+        - Note: This is not array of pointers!
+        - Array of pointers is - int* arr[n];
+        - The bracket makes the difference.
 
 -> Pointers with character arrays   - char ch[100];
     - As character arrays don't need loop to print them, on accessing the array with pointer it will print entire array and not the first character.
     - ptr = ch, while printing both print same.
     - *ptr = ch[0]
-    - Note: ptr = ch or ptr = &ch[0] 
-            and not ptr = &ch;           -- this will throw error.
-            Why?
-            # because 'ptr' in this case is declared as pointer to a single char, while 'ch' stores address of sequence of characters(multiple addresses).
-            # basically 'ch' acts as an iterator.
 
--> Wild Pointers - Uninitialized or deleted pointer. This means the pointer doesn't point to a valid memory location.
-                 - Accessing a wild pointer can result to undefined behaviour.
-                 - Avoid deleting pointer that have not been allocated using 'new' operator (i.e. not present in heap memory).
-                 - Before deleting a pointer, make sure to point it to 'nullptr' to avoid accessing a wild pointer.
+-> Wild Pointers:
+    - Uninitialized or deleted pointer. This means the pointer doesn't point to a valid memory location.
+    - Accessing a wild pointer can result to undefined behaviour.
+    - Avoid deleting pointer that have not been allocated using 'new' operator (i.e. not present in heap memory).
+    - Before deleting a pointer, make sure to point it to 'nullptr' to avoid accessing a wild pointer.
+
+-> Void/Generic pointers:       -- void* ptr;
+    - These pointers can point to address of variable of any data type.
+    - The catch is, we can't derefence it since the compiler doesn't know the data type it is pointing to.
+    - To use void pointer, we must first cast it.
+    - They are used to for dynamic memory allocation using 'new' operator. When memory is allocated using 'new' operator, the type of allocated memory is determined at runtime.
+
+-> Dangling pointers:
+    - A pointer which points to a memory which has been freed/deallocated.
+    - This happens:
+        1. When a pointer points to a memory, and later the memory is deleted. So, the pointer is still pointing to the same memory location, making it "Dangling".
+        2. Return a pointer to a local variable.
+        3. Using a pointer post it's deletion.
+    - Precaution:
+        1. Use smart pointers provided by C++. (unique_ptr, shared_ptr, weak_ptr).
+        2. Use reference instead of pointers.
+        3. Avoid returning pointers to local variables.
+        4. Nullify pointers after deleting or freeing memory.
+
