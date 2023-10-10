@@ -7,7 +7,7 @@ void solve(int arr[],int n){
 }
 
 // so, if 'arr' is acting as a pointer, we can take the input in a pointer ?
-void solve2(int* ptr,int n){
+void solve2(int *ptr,int n){
     cout << sizeof(ptr) << endl;        // prints 8     -- So, we now conclude that the entire array is not passed to a function, instead the reference is passed
     
     cout << &ptr << endl;               // prints y     -- i.e. different from main(), because this pointer is a new pointer which stores address of the same array passed to it.

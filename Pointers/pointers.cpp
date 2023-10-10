@@ -20,7 +20,7 @@ using namespace std;
 // pointer with characters
 void characterArray(){
     char ch[50] = "Akshit";
-    char* cptr = ch;                 // only 'ch' and not '&ch'.
+    char *cptr = ch;                 // only 'ch' and not '&ch'.
     cout << cptr << endl;            // unlike integer array where this would print the address of variable, this here would print entire array i.e. "Akshit"
     cout << *cptr << endl;           // this will act same, prints ch[0] i.e. 'A'.
 
@@ -29,7 +29,7 @@ void characterArray(){
 
     // So, what if we try it with a single character and not char array?
     char c = 'A';
-    char* cp = &c;
+    char *cp = &c;
     cout << cp << endl;         // this will keep printing till it finds '\0' which means it will print characters after 'A' too... (can be anything!)
 
 
@@ -37,24 +37,24 @@ void characterArray(){
     // BAD practice
     char *cptrBad = "Akshit";
     // Why? Well we know pointers only store addresses. So, where will "Akshit" be stored ?
-    // This is bad because "Akshit" is stored in a temporary storage and the address of temp storage is assigned to cptrBad, hence it is a bad practice
+    // This is bad because "Akshit" is stored in a temporary storage (stack) and the address of temp storage is assigned to cptrBad, hence it is a bad practice
 }
 
 // void pointers
 void voidPointers(){
-    void* vPtr;
+    void *vPtr;
     int x = 10;
     vPtr = &x;
 
     // before using let's cast it to 'int'
-    int* intPtr = static_cast<int*>(vPtr);          // static_cast operator is a compile time operator that tells compiler to consider vPtr as pointer to 'int' data type
+    int *intPtr = static_cast<int*>(vPtr);          // static_cast operator is a compile time operator that tells compiler to consider vPtr as pointer to 'int' data type
     cout << *intPtr << endl;                        // this will print 10
 
 }
 
 // passing pointers
 // Passed by value
-void byValue(int* pValue){
+void byValue(int *pValue){
     pValue = pValue + 1;              // this doesn't modify main() pointer, a new pointer 'pValue' with a different address is created.
 }
 // Passed by reference
@@ -62,12 +62,16 @@ void byReference(int* &pRef){
     pRef = pRef + 1;              // this modifies main() pointer
 }
 
+
+// function pointers        -- not much used in DSA
+int (*fptr) (int a,char *c);            // declaration
+
 int main(){
     // 1)
 
     // declaration
     int a = 10;
-    int* ptr = &a;      // right practice
+    int *ptr = &a;      // right practice
 
     // dereferencing
     cout << *ptr << endl;
@@ -88,13 +92,15 @@ int main(){
     int *p1 = 0;        // better practice      --> create null pointer
         // or
     int *p2 = nullptr;  // 2nd way of null pointer
+        // or
+    int *px = NULL;     // 3rd way of null pointer
 
 
 
     //3)    Pointer storing same address
     int b = 3;
-    int* p3 = &b;
-    int* p4 = p3;       // -> here 'p4' will store the address of 'b' not 'p3'  i.e. value stored in p3.
+    int *p3 = &b;
+    int *p4 = p3;       // -> here 'p4' will store the address of 'b' not 'p3'  i.e. value stored in p3.
 
     /*
         -> it will result in compilation error if we do - int* p4 = &p3;
@@ -106,9 +112,9 @@ int main(){
     int c = 3;
 
     // declaration
-    int* p5 = &c;
-    int** p6 = &p5;              // -> This is pointer to pointer which stores address pointer p5.
-    int*** p7 = &p6;             // -> Pointer to -> a pointer to -> a pointer          .. and so on... 
+    int *p5 = &c;
+    int **p6 = &p5;              // -> This is pointer to pointer which stores address pointer p5.
+    int ***p7 = &p6;             // -> Pointer to -> a pointer to -> a pointer          .. and so on... 
     /*
         -> p7 stores address of p6 pointer
         -> p6 stores address of p5 pointer
@@ -132,6 +138,15 @@ int main(){
     
     byReference(p5);
     cout << p5 << endl;             // p5 is modified
+
+
+
+    // 5) Pointer to entire array
+    int ar[5] = {1,2,3,4,5};
+    int (*p2Array)[5] = &ar;
+
+    // 6) Pointer to the first integer or base address of array
+    int *p8 = ar;           // this points to the first element address of the array
 
 
 }
