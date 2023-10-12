@@ -3,7 +3,7 @@
 using namespace std;
 
 // Problem  || Leetcode : 539
-// # Couldn't solve this, although attempted it
+// # Couldn't solve this, although attempted it - later had to watch video and solve this.
 /*
     -> Given a list of 24-hour clock time points in "HH:MM" format.
     -> Return the minimum minutes difference between any two time-points in the list.
@@ -17,7 +17,7 @@ using namespace std;
 
     -> There are two types of differences:
         - Moving in minor - segment
-        - Moving in major - segmenet
+        - Moving in major - segment
     -> But which is the minor segment ?
     -> We take both and take minimum among them to be answer
     -> Conider one movement clockwise and the other anti - clockwise
@@ -28,27 +28,40 @@ using namespace std;
     
 */
 
-
-vector<int> getTime(vector<string> &st){
+// convert time in minutes
+vector<int> getTimeInMins(vector<string> &st){
     vector<int> res;
     for(int i = 0;i < st.size();i++){
-        string time = st[i];
-        int hours = stoi(time.substr(0,2));
+        string time = st[i];                                // time at 'i'
+        int hours = stoi(time.substr(0,2));          
         int minutes = stoi(time.substr(3,2));
-        int totalMinutes = (hours * 60) + minutes;
+        int totalMinutes = (hours * 60) + minutes;          // convert time in minutes
         res.push_back(totalMinutes);
     }
     return res;
 }
 
+// get the minimum difference among them
+int getMin(vector<int> &time){
+    int minimumDifference = INT_MAX;
+    int n = time.size();
+
+    // get the minimum time difference
+    for(int i = 1;i < n;i++)
+        minimumDifference = min(minimumDifference, time[i] - time[i - 1]);
+
+    // we also need to get the round about difference i.e. anti clockwise time difference between first and last element of the array
+    int antiClockTime = 24 * 60 - time[n - 1];
+    minimumDifference = min(minimumDifference, antiClockTime + time[0]);
+    return minimumDifference;
+}
 
 int findMinDifference(vector<string> &s){
-    int minDiff = INT_MAX;
     // get time in minutes
-    vector<int> time = getTime(s);              // shallow copy
-    // sort it
-    sort(time.begin(),time.end());
-    
+    vector<int> time = getTimeInMins(s);              // shallow copy
+    sort(time.begin(),time.end());                    // sort the time
+
+    int minDiff = getMin(time);                           // get the min diff
 
     return minDiff;
 }
@@ -62,5 +75,3 @@ int main(){
 
     return 0;
 }
-
-// Still not working!
