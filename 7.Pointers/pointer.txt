@@ -48,3 +48,32 @@
         3. Avoid returning pointers to local variables.
         4. Nullify pointers after deleting or freeing memory.
 
+-> Pointers and references:
+    Pointer - A pointer is a variable that holds the memory address of another variable. 
+            - A pointer needs to be dereferenced with the * operator to access the memory location it points to.
+    
+    Reference - A reference variable is an alias, that is, another name for an already existing variable. 
+              - A reference, like a pointer, is also implemented by storing the address of an object. 
+              - A reference can be thought of as a constant pointer (not to be confused with a pointer to a constant value!) with automatic indirection, i.e., the compiler will apply the * operator for you.
+
+-> Constant pointer v/s Pointer to a constant integer:
+    Constant pointer - A constant pointer is a pointer that cannot be changed to point to a different variable. 
+                     - The value of the pointer itself is constant.
+
+    Pointer to a const int - A pointer to a constant integer is a pointer that points to a constant integer variable. 
+                           - This means that the value of the integer variable cannot be changed through the pointer. 
+                           - However, the pointer itself can be changed to point to a different integer variable.
+
+    // Pointer to a constant integer
+    int const *ptr_to_const_int = &my_const_int;
+
+    // Constant pointer
+    int *const const_ptr = &my_int;
+
+    // This is allowed
+    ptr_to_const_int = &some_other_const_int;
+
+    // This is not allowed
+    const_ptr = &some_other_int;
+
+
