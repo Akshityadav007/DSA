@@ -9,7 +9,7 @@ Reorganise String                                           Not Done
 Group Anagrams                                              Done
 Longest Palindromic substring                               Done
 Find the Index of the first Occurrence in a string          Done
-String to Integer(atoi)                                     Not Done
+String to Integer(atoi)                                     Not Done        (Difficult)
 String Compression                                          Done
 Integer to Roman                                            Done
 Zig-zag Conversion                                          Done

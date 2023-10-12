@@ -109,7 +109,7 @@ string integerToRoman(int num) {
 }
 
 
-// A better code i found on leetcode:
+// A better code I found on leetcode:
 class Solution {
 public:
     string intToRoman(int num) {
