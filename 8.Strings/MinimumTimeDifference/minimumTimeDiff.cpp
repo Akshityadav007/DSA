@@ -19,12 +19,15 @@ using namespace std;
         - Moving in minor - segment
         - Moving in major - segment
     -> But which is the minor segment ?
-    -> We take both and take minimum among them to be answer
-    -> Conider one movement clockwise and the other anti - clockwise
     
     -> Basically issue comes with day and night
         - We can consider day after night or night after day
         - Both are valid, but which is the minimum consideration ?
+
+    -> The trick is we need to check the first and last element's time difference too at the last to check for anticlock wise time difference.
+    -> Why do we check only for first and last elements? 
+        - Because as we've sorted the time, all other elements are already consecutive and monotonically increasing. So, the clockwise direction time is the minimum time in these cases. 
+        - Only the first and last time have the possiblity of anticlockwise movement to be minimum
     
 */
 
