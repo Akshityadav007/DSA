@@ -5,15 +5,15 @@ Reverse Only letters                                        Done
 Longest Common Prefix                                       Done
 Reverse Vowels of a string                                  Done
 Isomorphic Strings                                          Done
-Reorganise String                                           Not Done
+Reorganise String                                           Done           (Couldn't do - new approach .. greedy learnt!)
 Group Anagrams                                              Done
 Longest Palindromic substring                               Done
 Find the Index of the first Occurrence in a string          Done
-String to Integer(atoi)                                     Not Done        (Difficult)
+String to Integer(atoi)                                     Done            (Difficult - too many edge cases, but did after 3-4 days)
 String Compression                                          Done
 Integer to Roman                                            Done
 Zig-zag Conversion                                          Done
-Largest Number                                              Not Done
+Largest Number                                              Done            (New thing to learn! - couldn't do, obviously)
 Remove All Adjacent Duplicates In the String - 2            Not Done
 Implement std::string::erase()                              Done
 Minimum Time difference                                     Done            (Couldn't do)
