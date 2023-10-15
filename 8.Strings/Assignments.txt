@@ -14,7 +14,7 @@ String Compression                                          Done
 Integer to Roman                                            Done
 Zig-zag Conversion                                          Done
 Largest Number                                              Done            (New thing to learn! - couldn't do, obviously)
-Remove All Adjacent Duplicates In the String - 2            Not Done
+Remove All Adjacent Duplicates In the String - 2            Done            (Couldn't do - please revisit this)
 Implement std::string::erase()                              Done
 Minimum Time difference                                     Done            (Couldn't do)
 Number of Laser Beams in a bank                             Done

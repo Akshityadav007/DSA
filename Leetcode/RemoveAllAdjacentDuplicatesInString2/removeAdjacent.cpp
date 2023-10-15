@@ -11,56 +11,39 @@ using namespace std;
 
 // Solution
 /*
-    2 - pointer approach
-    -> ptr1 - Starting from '0' index , denotes no 'k' duplicates from 0 to ptr1 (excluding).
-    -> ptr2 - Will move from ptr1 to the next 'k' elements.
-            - If 'k' elements passed and all the elements of subarray (window - from ptr1 to ptr1 + k) are not same, then we'll start again i.e. ptr1 = 0.
-            - Else, delete the window from string, move ptr1 a step back.
+    Method 1:
+    -> Keep adding the characters, and after adding just check if last 'k' characters from that position are same.
+    -> If so, delete(pop) k characters from that position.
+    -> Note : The result string size should be greater than 'k' to perfrom the check operation.
+    -> TC : O(nk).
+    -> SC : O(1).
+
+    Method 2: 2 ptr approach - i,j
+    -> 'i' will be placed to the position where to left of 'i' everything is fine.
+    -> 'j' will traverse the array and keep checking.
+    -> For checking we need to keep a count of the occurrence of characters occurring adjacently.
+    -> TC : O(n).
+    -> SC : O(n).
 */
-bool min(int a,int b){
-    if(a > b)
-        return b;
-    else
-        return a;
-}
 
 string removeDuplicates(string s, int k) {
-    if(s.size() == 1)
-        return s;
-    // two pointers
-    int p1 = 0;
-    // from '0' to 's.size() - k'
-    while(p1 < s.size() - k){
-        bool isKRepeating = true;               // mark next 'k' elements as repeating initially
-        int p2 = p1;
-        for(;p2 < p1 + k - 1;p2++){
-            // if we get a character that is not repeating
-            if(s[p2] != s[p2 + 1]){
-                isKRepeating = false;
-                break;
-            }
+    int i = 0,j = 0;
+
+    // to store the count/freq of the characters
+    vector<int> count(s.size(),0);
+
+    while(j < s.size()){
+        s[i] = s[j];
+        count[i] = 1;
+        if(i > 0 && s[i - 1] == s[i]){
+            count[i] = count[i] + count[i - 1];
         }
-        if(isKRepeating){
-            // delete the subarray (window of 'k'elements)
-            s = (s.substr(0,p1) + s.substr(p2));
-            p1 = 0;                             // move p1 to 0
+        if(count[i] == k){
+            i -= k;
         }
-        else{
-            p1++;
-        }
+        i++;j++;
     }
-    // from 's.size() - k to s.size()'
-    bool isNonRpeating = false;             // mark next 'k' elements initially as non repeating
-    for(;p1 < s.size() - 1;p1++){
-        if(s[p1] != s[p1 + 1]){
-            isNonRpeating = true;
-            break;
-        }
-    }
-    // if all last 'k' elements of the array are repeating
-    if(isNonRpeating == false){
-        s = s.substr(0,s.size() - k);
-    }
+    s = s.substr(0,i);
     return s;
 }
 
