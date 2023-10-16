@@ -43,6 +43,8 @@ using namespace std;
             myHash.insert(nums[i]);
 
             // let's remove the 'k' elements we inserted earlier
+            // we do this after having traversed 'k' items in the array.
+            // we remove the elements before 'k' positions (starting from the 'ith' element).
             if(i >= k){
                 myHash.erase(nums[i - k]);
             }
