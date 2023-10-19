@@ -11,6 +11,14 @@ using namespace std;
     -> '*' is de - referencing operator (returns the value to stored at the address stored in the pointer). Note: Only a pointer can be de-referenced.
     -> '&' is referencing operator (returns the address of the variable).
 
+
+    -> Pointers can be used to create dynamic arrays (having pointer stored in stack while the memory in heap).
+        - int *arr = new int[5];
+        - Here, pointer 'arr' is stored in stack which contains the base address of the array of size 5 stored in heap.
+        - The actual array is stored in heap memory.
+        - We can only use memory of heap using 'new' keyword.
+        - It is a good practice to delete heap memory after use.
+
     -> In the below code,
         Box - |a| stores value of 10 and has address '0x13231'. -- Just a random address.
         Box - |ptr| stores address of 'a' i.e. 0x13231.

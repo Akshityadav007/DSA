@@ -27,6 +27,7 @@ using namespace std;
     -> How do calls proceed? Is it simultaneous?
         - Calls do not proceed simultaneously.
         - At a time only call is proceeded (either left or right branch).
+        - For our convenience, we take left first and then right later.
 
 */
 
