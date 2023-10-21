@@ -19,12 +19,14 @@ using namespace std;
 */
 
 /*
-    Time complexity:
-    T(n) =  k          + T(n/2)                      +     T(n/2)                        +       nk
-            ↑             ↑                                ↑                                     ↑
-            Base case   Left Half Recursive call        Right Half Recursive call               merge
+    # Time complexity:
+        T(n) =  k          + T(n/2)                      +     T(n/2)                        +       nk
+                ↑             ↑                                ↑                                     ↑
+                Base case   Left Half Recursive call        Right Half Recursive call               merge
 
-    T.C. = O(nlogn).
+        T.C. = O(nlogn).
+    
+    # Space complexity:
 */
 
 // Step 2 & 3:
@@ -133,3 +135,7 @@ int main(){
 
     return 0;
 }
+
+
+
+// Homework - Try to get an in - place solution for this
