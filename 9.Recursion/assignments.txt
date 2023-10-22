@@ -1,1 +1,13 @@
-Questions                                           Status
+Questions                                                                                   Status
+Last occurrence of a char
+Reverse a String RE
+Add Two Strings RE (Integer stored as String) Palindrome Check RE
+Print all Subarray RE
+Remove all Occurrence of a Substring
+Buy and sell stocks
+House Robbery problem
+Integer to English words
+Wild Card Matching
+Perfect Square
+Minimum Cost for Tickets
+Number of Dice Roll with Target Sum
