@@ -141,8 +141,6 @@ int main(){
         visited[sourceRow][sourceCol] = true;
         ratInMaze(maze, row, col, sourceRow, sourceCol, result, visited);
     }
-    
-
 
     return 0;
 }

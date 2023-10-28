@@ -21,15 +21,15 @@ using namespace std;
 */
 
 int solve(vector<int> &v,int index){
-    int n = v.size();
-
     // base case
-    if(index > v.size())
+    if(index >= v.size())
         return 0;
 
     // Processing + Function call
+    
     // Case 1 : rob the current house
     int rob = v[index] + solve(v, index + 2);
+
     // Case 2 : don't rob the current house
     int dontRob = solve(v, index + 1);
 
@@ -37,7 +37,6 @@ int solve(vector<int> &v,int index){
 }
 
 int rob(vector<int>& nums) {
-    int n = nums.size();
     return solve(nums, 0);
 }
 

@@ -51,11 +51,12 @@ void printPermutation(string &s, int i){
         cout << s << " ";
         return;
     }
+    //          ↓  i got stuck in this initialisation
     for(int j = i; j < s.size(); j++){
         // create permutation
         swap(s[i], s[j]);
 
-        // recursive call
+        // recursive call   // ↓  i also got stuck here (confused which index to pass)
         printPermutation(s, i + 1);           // pass the permutation to recursive call for the next character
 
         swap(s[i], s[j]);                       // backtracking - this is done because we are here passing string by reference, so to do undo the changes we do backtracking

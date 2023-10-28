@@ -5,7 +5,7 @@ Add Two Strings RE (Integer stored as String) Palindrome Check RE   -           
 Print all Subarray RE                                               -                       Not Done
 Remove all Occurrence of a Substring                                -                       Not Done
 Buy and sell stocks                                                 -                       Not Done
-House Robbery problem                                               -                       Not Done
+House Robbery problem                                               -                       Done
 Integer to English words                                            -                       Not Done
 Wild Card Matching                                                  -                       Not Done
 Perfect Square                                                      -                       Not Done
