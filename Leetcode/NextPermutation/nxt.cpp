@@ -18,6 +18,10 @@ using namespace std;
 
 // Solution
 /*
+    # Method 1 : Using STL
+
+
+    # Method 2:
     -> We see that it was earlier a sorted array.
     -> Later it transformed into a permutation of itself and is currently at some stage.
     -> We need to find the next permutation.
@@ -31,6 +35,9 @@ using namespace std;
 
 
 */
+void nextPermutationUsingSTL(vector<int>& nums) {
+        next_permutation(nums.begin(), nums.end());
+}
 
 int main(){
 
