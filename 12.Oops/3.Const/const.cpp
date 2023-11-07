@@ -10,6 +10,7 @@ using namespace std;
        Any attempt to modify the value will result in a compilation error.
     3. You can declare a function as const, which means that it does not modify the state of the object it is called on.
     4. Compiler may be able to store const variables in read-only memory, which can result in faster access.
+    5. Constructor is only called while creating an object.
 
     # CONST is like real - world promise 
     (can be by - passed using 'mutable' keyword. But used only for de - bugging purposes. Good programers avoid it!)
@@ -71,7 +72,7 @@ class Test{
     int z;
 
     public:
-        // default constructor
+        // default constructor - (necessary to declare if parameterized constructor is declared (if a non parameterized object is needed to be created))
         Test(){
             x = 0;
             y = new int(0);
