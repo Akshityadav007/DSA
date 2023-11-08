@@ -1,0 +1,7 @@
+Two ways polymorphism can be achieved:
+1. Compile time
+2. Runtime
+
+1. Compile time :
+    - Static polymorphism (Function overloading). E.g. Parameterized Constructor
+    - Operator Overloading 
