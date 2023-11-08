@@ -29,8 +29,8 @@ class Student{
         }
 
         // setter
-        void setGf(string _gf){
-            gf = _gf;
+        void setGf(string gf){
+            this -> gf = gf;
         }
         
 };

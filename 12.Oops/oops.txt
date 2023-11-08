@@ -1,0 +1,7 @@
+Pillars of oops:
+
+1. Abstraction  -  Hiding data what others/users should not know.
+2. Encapsulation - Often a means to achieve abstraction by hiding details.
+                 - Perfect Encapsulation: All data members are private. (Use getter/setter)
+4. Inheritance  - Explained in cpp file.
+4. Polymorphism 
