@@ -1,5 +1,6 @@
 -> Pointer stores address of a variable.
 -> Note: IT WON'T STORE ANYTHING ELSE!. And this is the reason why pointers have a constant size(depending upon system architecture - 64 bits = 8bytes and for 34 bits = 4) irrespective of 'variable data type'.
+-> Note: ALWAYS use DEEP COPY while using pointers.
 
 -> In actual memory the address is stored in hexadecimal format.
 
