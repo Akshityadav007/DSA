@@ -6,6 +6,8 @@ using namespace std;
     -> From head
     -> From tail
     -> At a position
+
+    # Always make sure to isolate the list node before deletion.
 */
 class Node{
 
@@ -60,6 +62,16 @@ void deleteNode(Node *&head, int position){
     }
 
     int size = lengthLL(head);
+
+    // single element list
+    if(size == 1){
+        Node *temp = head;
+        delete temp;
+        head = NULL;
+
+        return;
+    }
+
     
     // delete head
     if(position == 1){
