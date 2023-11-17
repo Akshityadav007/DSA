@@ -35,7 +35,7 @@ class Node{
 };
 
 // to get the length of linked list
-int lengthLL(Node *head){
+int lengthLL(Node *&head){
     int size = 0;
     Node *curr = head;
     while(curr){
@@ -46,7 +46,7 @@ int lengthLL(Node *head){
 }
 
 // to print the linked list
-void printLL(Node *head){
+void printLL(Node *&head){
     Node *curr = head;
     while(curr != NULL){
         cout << curr -> data << " -> ";
