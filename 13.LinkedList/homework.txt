@@ -1,0 +1,4 @@
+Ques.1) Sort 0's, 1's, 2's in linked list.
+Ques.2) Add 2 linked list
+Ques.3) Remove duplicate in sorted LL
+Ques.4) Sort a linked list. For LL and array which is better quick sort or merge sort, why ?

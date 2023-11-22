@@ -22,6 +22,9 @@ using namespace std;
         -> Once we get repeated value, we know there is a loop.
 
     # Method 2 : Slow / fast pointer
+        -> Run slow and fast pointers.
+        -> If they meet at any point, there is a loop.
+        -> Or if fast reaches null, there is no loop.
 */
 
 // Method 1
@@ -42,6 +45,25 @@ bool hasCycle(ListNode *head) {
     return false;
 }
 
+
+// Method 2
+ bool hasCycle2(ListNode *head) {
+        if(head == NULL)
+            return false;
+        ListNode *slow = head;
+        ListNode *fast = head;
+
+        while(fast != NULL){
+            fast = fast -> next;
+            if(fast != NULL){
+                fast = fast -> next;
+                slow = slow -> next;
+                if(fast == slow)
+                    return true;
+            }  
+        }
+        return false;
+        }
 
 int main(){
 
