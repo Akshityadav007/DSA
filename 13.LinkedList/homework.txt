@@ -2,3 +2,24 @@ Ques.1) Sort 0's, 1's, 2's in linked list.
 Ques.2) Add 2 linked list
 Ques.3) Remove duplicate in sorted LL
 Ques.4) Sort a linked list. For LL and array which is better quick sort or merge sort, why ?
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Assignments
+--------------------
+
+• Delete N Nodes after M Nodes                                                                  -
+• Merge Two Sorted Lists                                                                        -
+• Print kth Node from the End                                                                   -
+• Intersection of Two Linked Lists                                                              -
+• Sort Lists using Merge Sort                                                                   -
+• Flatten Linked List                                                                           -
+• Copy List with Random Pointer                                                                 -
+• Rotate List                                                                                   -
+• Find Minimum and Maximum Number of Nodes Between Critical Points                              -
+• Merge Nodes in between Zeros                                                                  -
+• Odd Even Linked List                                                                          -
+• Double a Number Represented as a Linked List                                                  -
+• Remove Zero Sum Consecutive Nodes from Linked List                                            -
+• LRU Cache                                                                                     -
+• Swapping Nodes in a Linked List                                                               -

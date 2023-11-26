@@ -2,7 +2,7 @@
 using namespace std;
 
 /*
-    -> LIFO order
+    -> LIFO order (Last In First Order)
     -> Syntax:
         - Stack<data_type> stack_name;
         - E.g. : Stack<int> st;
