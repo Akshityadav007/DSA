@@ -91,6 +91,6 @@ int main(){
     -> Questions based on the same approach:
         1) Previous smaller number
         2) Longest Valid parentheses (Leetcode : 32 || Hard (DP))
-        3) Final Prices With a Special Discount in a Shop (Leetcode : 1475 || Easy)
+        3) Final Prices With a Special Discount in a Shop (Leetcode : 1475 || Easy) - Done
 
 */

@@ -10,3 +10,29 @@ Pillars of oops:
 
 
 # Note : Revise shallow/deep copy from internet (if you've forgotten).
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Difference b/w class and struct
+-----------------------------------
+
+-> Struct was initially made in C.
+-> We can apply OOps in struct (all concepts are applicable like cTor, dTor, etc.).
+-> Conventional Difference is that we use struct only for bundling and we use class when we want to use concepts of Oops.
+# Note : There is no technical difference, all concepts of Oops can be applied in struct too.
+
+ -----------------------------------------------------------------------------------
+|   Feature             | Struct                        | Class                     |
+ -----------------------------------------------------------------------------------
+    Type                | Value type                    | Reference type
+    Memory allocation   | Stack                         | Heap
+    Member access       | Public by default             | Private by default
+    Inheritance         | Not supported                 | Supported
+    Polymorphism        | Not supported                 | Supported
+    Default constructor | No default constructor        | Has a default constructor
+    Destructor          | No destructor                 | Has a destructor
+    Null assignment     | Cannot be assigned null       | Can be assigned null
+    Size                | Smaller                       | Larger
+    Performance         | Faster                        | Slower
+    Usage               | Small, simple data structures | Complex, reusable objects
