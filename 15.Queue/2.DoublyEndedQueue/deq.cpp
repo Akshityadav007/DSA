@@ -66,6 +66,7 @@ class deque{
             // normal flow
             else{
                 rear++;
+                arr[rear] = val;
             }
         }
 
