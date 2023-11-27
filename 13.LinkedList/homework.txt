@@ -8,14 +8,14 @@ Ques.4) Sort a linked list. For LL and array which is better quick sort or merge
 Assignments
 --------------------
 
-• Delete N Nodes after M Nodes                                                                  -
-• Merge Two Sorted Lists                                                                        -
-• Print kth Node from the End                                                                   -
-• Intersection of Two Linked Lists                                                              -
+• Delete N Nodes after M Nodes  [Coding Ninjas]                                                 -
+• Merge Two Sorted Lists [Leetcode]                                                             -  Done
+• Print kth Node from the End [Leetcode]                                                        -  Done
+• Intersection of Two Linked Lists [Leetcode]                                                   -  Done
 • Sort Lists using Merge Sort                                                                   -
 • Flatten Linked List                                                                           -
 • Copy List with Random Pointer                                                                 -
-• Rotate List                                                                                   -
+• Rotate List  [Leetcode]                                                                       - Done
 • Find Minimum and Maximum Number of Nodes Between Critical Points                              -
 • Merge Nodes in between Zeros                                                                  -
 • Odd Even Linked List                                                                          -
