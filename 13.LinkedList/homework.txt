@@ -12,10 +12,10 @@ Assignments
 • Merge Two Sorted Lists [Leetcode]                                                             -  Done
 • Print kth Node from the End [Leetcode]                                                        -  Done
 • Intersection of Two Linked Lists [Leetcode]                                                   -  Done
-• Sort Lists using Merge Sort                                                                   -
+• Sort Lists using Merge Sort [Leetcode]                                                        -  Done
 • Flatten Linked List                                                                           -
 • Copy List with Random Pointer                                                                 -
-• Rotate List  [Leetcode]                                                                       - Done
+• Rotate List  [Leetcode]                                                                       -  Done
 • Find Minimum and Maximum Number of Nodes Between Critical Points                              -
 • Merge Nodes in between Zeros                                                                  -
 • Odd Even Linked List                                                                          -

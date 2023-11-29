@@ -1,4 +1,6 @@
 #include<iostream>
+#include<vector>
+#include<algorithm>
 using namespace std;
 
 bool decreasingOrder(int &a,int &b){
