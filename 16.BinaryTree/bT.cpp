@@ -39,22 +39,52 @@ class Node{
         Node *left;
         Node *right;
 
-        // default constructor
+        // default constructor (made by me - babbar didn't make this, I don't know if this is needed)
         Node(){
-            data = 0;
+            this -> data = 0;
             this -> left = NULL;
             this -> right = NULL;
         }
 
         // parameterized constructor
         Node(int val){
-            data = val;
+            this -> data = val;
             this -> left = NULL;
             this -> right = NULL;
         }
+
 };
 
+
+// creates a tree and returns it's root node
+Node *createTree(){
+    cout << "Enter the value of node: " << endl;
+    int data;
+    cin >> data;
+
+    // if we don't want to make tree further, we assume input to be -1 (base case)
+    if(data == -1)
+        return NULL;
+
+    // Step 1: create node
+    Node *root = new Node(data);
+
+    // Step 2 : create left subtree
+    
+    cout << "Enter the left of : " << data << endl;
+    root -> left = createTree();             // recursive call
+
+    // Step 3 : create right subtree
+    
+    cout << "Enter the right of : " << data << endl;
+    root -> right = createTree();            // recursive call
+
+    return root;
+}
+
 int main(){
+
+    Node *root = createTree();
 
 
     return 0;
