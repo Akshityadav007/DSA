@@ -14,12 +14,12 @@ Assignments
 • Intersection of Two Linked Lists [Leetcode]                                                   -  Done
 • Sort Lists using Merge Sort [Leetcode]                                                        -  Done
 • Flatten Linked List                                                                           -
-• Copy List with Random Pointer                                                                 -
+• Copy List with Random Pointer  [Leetcode]                                                     -  Done
 • Rotate List  [Leetcode]                                                                       -  Done
 • Find Minimum and Maximum Number of Nodes Between Critical Points                              -
 • Merge Nodes in between Zeros                                                                  -
-• Odd Even Linked List                                                                          -
+• Odd Even Linked List   [Leetcode]                                                             -  Done
 • Double a Number Represented as a Linked List                                                  -
 • Remove Zero Sum Consecutive Nodes from Linked List                                            -
 • LRU Cache                                                                                     -
-• Swapping Nodes in a Linked List                                                               -
+• Swapping Nodes in a Linked List [Leetcode]                                                    -  Done
