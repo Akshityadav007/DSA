@@ -65,7 +65,7 @@ Node *createTree(){
     return root;
 }
 
-
+// This code gives TLE
 void levelOrderTraversal(Node *root){
     queue<Node*> q;
     q.push(root);               // initial work
@@ -94,6 +94,52 @@ void levelOrderTraversal(Node *root){
     }
 }
 
+
+
+
+// Problem || Leetcode :102
+struct TreeNode {
+     int val;
+     TreeNode *left;
+     TreeNode *right;
+     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ };
+
+// Code 2: This works on leetcode (method is same but code is cleaner)
+vector<vector<int>> levelOrder(TreeNode* root) {
+        vector< vector<int> > ans;
+
+        // make sure to check this edge case
+        if(root == NULL)
+            return ans;
+            
+        queue<TreeNode*> q;
+        q.push(root);
+
+        while(!q.empty()){
+            vector<int> level;      // to store each level elements
+            int size = q.size();
+
+            // traverse the previous level
+            for(int i = 0;i < size; i++){
+                TreeNode *front = q.front();            // take out the front
+                level.push_back(front -> val);          // push the value in level 
+                q.pop();                                // remove the node from queue
+
+                // prepare the next levels
+                if(front -> left != NULL)               
+                    q.push(front -> left);
+                
+                if(front -> right != NULL)
+                    q.push(front -> right);
+            }
+            ans.push_back(level);         
+        }
+
+        return ans;
+}
 
 int main(){
 

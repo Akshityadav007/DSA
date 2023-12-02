@@ -1,8 +1,8 @@
 -> Minimum Bracket Reversal                                 -
 -> Remove All Adjacent Duplicates In String                 -
 -> Celebrity Problem                                        -
--> Next greater element in Linked List [leetcode]           -
--> N Stacks in an Array                                     -
+-> Next greater element in Linked List [leetcode]           -   Done
+-> N Stacks in an Array   [Coding Ninjas]                   -
 -> Online Stock Span [Leetcode]                             -
 -> Check If Word Is Valid After Substitutions [Leetcode]    -
 -> Decode Strings [Leetcode]                                -

@@ -17,7 +17,7 @@ Assignments
 • Copy List with Random Pointer  [Leetcode]                                                     -  Done
 • Rotate List  [Leetcode]                                                                       -  Done
 • Find Minimum and Maximum Number of Nodes Between Critical Points                              -
-• Merge Nodes in between Zeros                                                                  -
+• Merge Nodes in between Zeros  [Leetcode]                                                      -  Done
 • Odd Even Linked List   [Leetcode]                                                             -  Done
 • Double a Number Represented as a Linked List                                                  -
 • Remove Zero Sum Consecutive Nodes from Linked List                                            -
