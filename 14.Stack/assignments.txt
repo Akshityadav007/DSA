@@ -3,7 +3,7 @@
 -> Celebrity Problem                                        -
 -> Next greater element in Linked List [leetcode]           -   Done
 -> N Stacks in an Array   [Coding Ninjas]                   -
--> Online Stock Span [Leetcode]                             -
+-> Online Stock Span [Leetcode]                             -   Done
 -> Check If Word Is Valid After Substitutions [Leetcode]    -
 -> Decode Strings [Leetcode]                                -
 -> Car Fleet I [Leetcode]                                   -

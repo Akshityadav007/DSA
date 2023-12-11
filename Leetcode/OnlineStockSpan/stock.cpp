@@ -21,9 +21,12 @@ using namespace std;
     # Method 1 : Brute Force (TLE)
         -> Simply keep pushing the elements in stack and then count the earlier pushed elements.
         -> After that push the elements back to the stack earlier popped.
+    
+    # Method 2 : Optimized
+        -> We store the last pushed stock's span along with it in a stack as a pair.
 */
 
-// Method 1
+// Method 1 (TLE)
 class StockSpanner {
 public:
     stack<int> st;          // to store the prices
@@ -51,7 +54,28 @@ public:
 
 
 // Method 2
-
+class StockSpanner {
+public:
+    stack< pair<int,int> > st;          // to store the index, prices
+    int smallTillNow = 0;
+    StockSpanner() {}
+    
+    int next(int price) {
+        if(st.empty()){
+            st.push({1,price});
+            return 1;
+        }
+        else{
+            int days = 1;
+            while(!st.empty() && st.top().second <= price){
+                days += st.top().first;
+                st.pop();
+            }
+            st.push({days, price});
+            return days;
+        }
+    }
+};
 
 int main(){
 
