@@ -2,7 +2,7 @@ Fast Way to find diameter of binary tree            -
 Fast Way to find height balanced tree               -
 Check two trees are identical                       -   Done
 Symmetric Tree (Mirror Subtrees)                    -   Done
-zig-zag traversal                                   -
+zig-zag traversal     [Leetcode]                    -   Done
 Transform to sum tree   [GFG]                       -   Done
 Diagonal Traversal                                  -
 Vertical Traversal                                  -
