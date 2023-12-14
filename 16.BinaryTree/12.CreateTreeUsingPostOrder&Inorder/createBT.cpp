@@ -61,12 +61,12 @@ void createMapping(map<int, int> &m, int inorder[], int size){
 
 int main(){
     int inorder[] = {10,8,6,2,4,12};
-    int preorder[] = {2,8,10,6,4,12};
+    int postorder[] = {2,8,10,6,4,12};
 
     map <int, int> m;
     createMapping(m, inorder, 7);
     int postIndex = 6;                          // NOTE : pre Index is passed by reference
-    Node *root = construct(inorder, preorder, postIndex, 0, 7, 7, m);
+    Node *root = construct(inorder, postorder, postIndex, 0, 7, 7, m);
 
     return 0;
 }

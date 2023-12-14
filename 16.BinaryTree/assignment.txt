@@ -1,0 +1,15 @@
+Fast Way to find diameter of binary tree            -   
+Fast Way to find height balanced tree               -
+Check two trees are identical                       -   Done
+Symmetric Tree (Mirror Subtrees)                    -   Done
+zig-zag traversal                                   -
+Transform to sum tree   [GFG]                       -   Done
+Diagonal Traversal                                  -
+Vertical Traversal                                  -
+K-Sum Paths                                         -
+Morris Traversal                                    -
+Flatten a binary tree into LinkedList               -
+sum of longest bloodline of tree                    -
+Maximum sum of non-adjacent nodes                   -
+Burning Tree                                        -
+Find Duplicate Sumtrees                             -
