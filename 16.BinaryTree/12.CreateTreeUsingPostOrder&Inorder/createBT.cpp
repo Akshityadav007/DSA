@@ -2,7 +2,7 @@
 #include<map>
 using namespace std;
 
-// Problem 
+// Problem || Leetcode : 106 
 /*  
     -> Given post-order and in-order traversal of tree.
     -> Create a tree using it.
@@ -31,24 +31,29 @@ class Node{
 };
 
 
+// Solution
+/*
+    -> Only difference here from pre order question will be:
+        1) Traverse post order from back
+        2) Give call for right subtree first for creation then left tree as post order has Left - Right - Root, as we are checking from back right will come first.
+*/
 
 // NOTE : post Index is passed by reference
-Node *construct(int inorder[], int postorder[], int &postIndex, int inStart, int inEnd, int size, map<int, int> m){
+Node *construct(int inorder[], int postorder[], int &postIndex, int start, int end, int size, map<int, int> m){
     // base case
-    if(postIndex >= size || inStart > inEnd)
+    if(postIndex < 0 || start > end)
         return NULL;
     
     // solve 1 case
     int element = postorder[postIndex];
     postIndex--;
     Node *root = new Node(element); 
-    // search this element in in order
-    int position = m[element];
+    int position = m[element];                                                                         // search this element in inorder
 
     
     // rest will be done by recursion
-    root -> right = construct(inorder, postorder, postIndex, position + 1, inEnd, size, m);             // right is done before left in post order
-    root -> left = construct(inorder, postorder, postIndex, inStart, position - 1, size, m);
+    root -> right = construct(inorder, postorder, postIndex, position + 1, end, size, m);             // right is done before left in post order
+    root -> left = construct(inorder, postorder, postIndex, start, position - 1, size, m);
 
     return root;
 }
@@ -65,7 +70,7 @@ int main(){
 
     map <int, int> m;
     createMapping(m, inorder, 7);
-    int postIndex = 6;                          // NOTE : pre Index is passed by reference
+    int postIndex = 6;                                                                               // NOTE : post Index is passed by reference 
     Node *root = construct(inorder, postorder, postIndex, 0, 7, 7, m);
 
     return 0;
