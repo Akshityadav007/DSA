@@ -36,7 +36,7 @@ struct Node
 // Solution
 /*
     -> For top view we don't have any levels given so we'll consider our our own levels (to the left in -ve and to the right +ve).
-    -> We'll use level order traversal and for each level.    
+    -> We'll use level order traversal for each level.    
 */
 
 vector<int> topView(Node *root){
