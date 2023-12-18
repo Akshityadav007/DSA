@@ -8,8 +8,8 @@ Diagonal Traversal                                  -
 Vertical Traversal                                  -
 K-Sum Paths                                         -
 Morris Traversal                                    -
-Flatten a binary tree into LinkedList               -
+Flatten a binary tree into LinkedList [Leetcode]    -
 sum of longest bloodline of tree                    -
 Maximum sum of non-adjacent nodes                   -
 Burning Tree                                        -
-Find Duplicate Sumtrees                             -   
+Find Duplicate Sumtrees                             -    
