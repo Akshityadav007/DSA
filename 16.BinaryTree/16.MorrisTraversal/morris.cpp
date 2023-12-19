@@ -12,6 +12,14 @@ class Node{
     Node *right;
 };
 
+
+
+// Solution
+/*
+      
+*/
+
+
 void morrisTraversal(Node *root){
 
 }
