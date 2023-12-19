@@ -1,5 +1,5 @@
 -> Minimum Bracket Reversal                                 -
--> Remove All Adjacent Duplicates In String                 -
+-> Remove All Adjacent Duplicates In String                 -   Done
 -> Celebrity Problem                                        -
 -> Next greater element in Linked List [leetcode]           -   Done
 -> N Stacks in an Array   [Coding Ninjas]                   -
@@ -13,6 +13,6 @@
 -> Daily Temperatures                                       -   Done (cheating)
 -> Remove K Digits                                          -
 -> Minimum Add To Make Parentheses Valid                    -
--> Longest Valid Parentheses                                -
+-> Longest Valid Parentheses    [Leetcode / DP]             -
 -> Asteroid Collision                                       -
 -> Design Browser History                                   -
