@@ -6,7 +6,7 @@ zig-zag traversal     [Leetcode]                    -   Done
 Transform to sum tree   [GFG]                       -   Done
 Diagonal Traversal                                  -
 Vertical Traversal                                  -
-K-Sum Paths                                         -
+K-Sum Paths                                         -   
 Morris Traversal                                    -
 Flatten a binary tree into LinkedList [Leetcode]    -
 sum of longest bloodline of tree                    -
