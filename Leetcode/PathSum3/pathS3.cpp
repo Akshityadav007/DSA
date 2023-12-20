@@ -20,12 +20,17 @@ struct TreeNode {
 
 // Solution
 /*
-    # Method 1:
+    # Method 1: (My method)
      -> Apply DFS at every node.
      -> To get to every node, I used bfs (can use any traversal).
 
     # Method 2 : (Can be solved using map)
      -> Map can be used to track the sum till a node so that we need not traverse back.
+
+    
+    # points of error
+     -> Initially was not passing answer by reference which didn't update paths which could be extended further and would give same pathSum.
+     -> 'count' was 'int' type initially which could not support large sum values.
 */
 
 void dfs(TreeNode *root,int &ans, long long count, int targetSum){
