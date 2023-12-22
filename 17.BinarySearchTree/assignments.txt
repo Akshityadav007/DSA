@@ -2,7 +2,7 @@ Inorder Successor in BST
 Inorder Predecessor in BST
 Build BST using Preorder Traversal
 Brothers from Different roots
-Convert BST to a Balanced BST
+Convert BST to a Balanced BST                                         - Done
 Find Median of BST
 Check BST has Dead End
 Count BST Nodes lying in a Range
