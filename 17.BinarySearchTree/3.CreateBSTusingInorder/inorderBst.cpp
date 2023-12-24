@@ -33,7 +33,7 @@ Node *bstFromInorder(int inorder[], int start, int end){
         return NULL;
     
     // solve 1 case
-    int mid = ((start + end) >> 1);
+    int mid = start + ((end - start) >> 1);
     int curr = inorder[mid];
     Node *root = new Node(curr);
 
