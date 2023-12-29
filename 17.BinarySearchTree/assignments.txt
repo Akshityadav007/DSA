@@ -1,7 +1,7 @@
 Inorder Successor in BST                                              -                           
 Inorder Predecessor in BST                                            -
 Build BST using Preorder Traversal                                    -
-Brothers from Different roots                                         -
+Brothers from Different roots                                         - Done
 Convert BST to a Balanced BST                                         - Done
 Find Median of BST                                                    -
 Check BST has Dead End                                                -
