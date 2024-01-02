@@ -1,4 +1,4 @@
-Fast Way to find diameter of binary tree            -   
+Fast Way to find diameter of binary tree            -   Done
 Fast Way to find height balanced tree               -
 Check two trees are identical                       -   Done
 Symmetric Tree (Mirror Subtrees)                    -   Done

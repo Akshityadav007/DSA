@@ -3,9 +3,9 @@ Inorder Predecessor in BST                                            -
 Build BST using Preorder Traversal                                    -
 Brothers from Different roots                                         - Done
 Convert BST to a Balanced BST                                         - Done
-Find Median of BST                                                    -
+Find Median of BST                                                    - Done
 Check BST has Dead End                                                -
-Count BST Nodes lying in a Range                                      -
+Count BST Nodes lying in a Range                                      - Done
 Flatten BST to Sorted LL                                              -
 Replace elements with least Greater elements to it Right              -
 Valid BST from Preorder                                               -

@@ -23,14 +23,17 @@ struct TreeNode {
 // Solution
 /*  
     # Method 1 : Brute force
-    -> Case 1 : Both nodes lie in left sub tree
-    -> Case 2 : Both nodes lie in right sub tree
-    -> Case 3 : Both nodes lie in either sub trees
-    -> We got 3 answers, we'll return maximum of three
+        -> Case 1 : Both nodes lie in left sub tree
+        -> Case 2 : Both nodes lie in right sub tree
+        -> Case 3 : Both nodes lie in either sub trees
+        -> We got 3 answers, we'll return maximum of three
 
-    # Method 2 : 
+    # Method 2 : Dp
+        -> Modify the height function so that it gives diameter.
+        -> Don't call height function for every node repeatedly.
 */
 
+// Method 1
 int height(TreeNode* root) {
     if(root == NULL)
         return 0;
@@ -41,7 +44,6 @@ int height(TreeNode* root) {
 
     return height;
 }
-
 
 // Method 1
 int diameterOfBinaryTree(TreeNode* root) {
@@ -55,6 +57,28 @@ int diameterOfBinaryTree(TreeNode* root) {
 
     return max(option1, max(option2, option3));
 }
+
+
+
+// Method : 2
+int d = 0;
+int height(TreeNode* root) {
+    if(root == NULL)
+        return 0;
+        
+    int leftHeight = height(root -> left);
+    int rightHeight = height(root -> right);
+    d = max(d, leftHeight + rightHeight);
+
+    return 1 + max(leftHeight, rightHeight);
+}
+
+int diameterOfBinaryTree(TreeNode* root) {
+    height(root);
+
+    return d;
+}
+
 
 int main(){
 
