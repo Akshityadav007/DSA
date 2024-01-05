@@ -2,7 +2,7 @@
 using namespace std;
 
 /*      ---------------------
-       | Dynamic Programming |
+       | Dynamic Programming |      😊
         ---------------------
 
     -> Dynamic Programming is mainly an optimization over plain recursion.
@@ -23,6 +23,10 @@ using namespace std;
         3) Patterns
 
         # There is a possibility that "top down" approach might not work (slower than bottom up approach) sometimes. #
+
+    -> The no. of parameters changing (in recursion) is directly proportional to dp type.
+        - E.g. If 1 parameter is changing in recursion, then 1 - D Dp.
+        - E.g. If 2 parameter is changing in recursion, then 2 - D Dp.
 */
 
 // 1) Top - down approach
@@ -44,3 +48,7 @@ int main(){
 
     return 0;
 }
+
+
+
+// to type emoji in windows : press " windows + ;" button.

@@ -18,6 +18,8 @@ using namespace std;
         1) Method 1 : Brute force
         2) Method 2 : Memoization
         3) Method 3 : Tabulation
+
+        ** 4) Space optimized **
 */
 
 // Method 1 : Might give TLE in some platforms (doesn't give in leetcode)   || T.C. : O(2 ^ n)
@@ -66,12 +68,37 @@ int fib(int n) {
     dp[1] = 1;
 
     // step 3 : fill the remaining dp array
+    /*
+        - index moves from 0 to n
+        - already 0,1 have been filled
+        - hence, next index needs to move from 2 -> n
+    */
     for(int i = 2; i <= n; i++)
         dp[i] = dp[i - 1] + dp[i - 2];
 
     return dp[n];
 }
 
+
+
+// Method 4 : Space optimized
+int fib(int n) {
+    int prev = 0;
+    if(n == 0)
+        return 0;
+    int curr = 1;
+    if(n == 1)
+        return 1;
+
+    int ans;
+    for(int i = 2; i <= n; i++){
+        ans = prev + curr;
+        prev = curr;
+        curr = ans;
+    }
+
+    return ans;
+}
 
 
 int main(){
