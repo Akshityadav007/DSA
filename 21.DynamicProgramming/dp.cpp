@@ -34,6 +34,8 @@ using namespace std;
     Step 1 => Create a dp array.
     Step 2 => Store/return answer in dp array.
     Step 3 => If the answer is already present (stored earlier), return it (instead of solving further).
+
+    # If it gives TLE, pass the variable by reference.
 */
 
 // 2) Bottom - up approach
