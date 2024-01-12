@@ -30,7 +30,7 @@ class TrieNode{
             this -> value = val;
             this -> isTerminal = false;
             for(int i = 0;i < 256; i++)
-                children[i] = NULL;
+                this -> children[i] = NULL;
         }
 };
 
