@@ -2,8 +2,8 @@ Array Subset of Another Array                                    -  Done
 Union of Two Linked Lists                                        -  Done
 Intersection of Two Linked Lists                                 -  Done
 Sum Equals To Sum                                                -  Done
-Largest Subarray with 0 Sum                                      -
-Largest Subarray of 0’s and 1’s                                  -
+Largest Subarray with 0 Sum                                      -  Done
+Largest Subarray of 0’s and 1’s                                  -  Done
 Valid Anagram - [Already Covered in Strings Week]                -  Done
 Replace Words                                                    -  Done
 Top K Frequent Words                                             -  Done
