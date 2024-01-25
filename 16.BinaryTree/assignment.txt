@@ -7,8 +7,8 @@ Transform to sum tree   [GFG]                       -   Done
 Diagonal Traversal                                  -
 Vertical Traversal                                  -
 K-Sum Paths                                         -   Done
-Morris Traversal                                    -
-Flatten a binary tree into LinkedList [Leetcode]    -
+Morris Traversal                                    -   Done
+Flatten a binary tree into LinkedList [Leetcode]    -   Done
 sum of longest bloodline of tree                    -
 Maximum sum of non-adjacent nodes                   -
 Burning Tree                                        -
