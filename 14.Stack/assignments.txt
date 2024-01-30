@@ -13,6 +13,6 @@
 -> Daily Temperatures                                       -   Done (cheating)
 -> Remove K Digits                                          -
 -> Minimum Add To Make Parentheses Valid                    -
--> Longest Valid Parentheses    [Leetcode / DP]             -
+-> Longest Valid Parentheses    [Leetcode / DP]             -   Done
 -> Asteroid Collision                                       -
 -> Design Browser History                                   -
