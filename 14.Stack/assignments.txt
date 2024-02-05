@@ -5,7 +5,7 @@
 -> N Stacks in an Array   [Coding Ninjas]                   -
 -> Online Stock Span [Leetcode]                             -   Done
 -> Check If Word Is Valid After Substitutions [Leetcode]    -   Done
--> Decode Strings [Leetcode]                                -
+-> Decode Strings [Leetcode]                                -   Done
 -> Car Fleet I [Leetcode]                                   -
 -> Car Fleet II [Leetcode]                                  -
 -> Simplify Path [Leetcode]                                 -   Done
