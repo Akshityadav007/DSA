@@ -14,5 +14,5 @@
 -> Remove K Digits                                          -
 -> Minimum Add To Make Parentheses Valid                    -
 -> Longest Valid Parentheses    [Leetcode / DP]             -   Done
--> Asteroid Collision                                       -
+-> Asteroid Collision    [Leetcode]                         -   Done
 -> Design Browser History                                   -
