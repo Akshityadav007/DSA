@@ -1,5 +1,5 @@
 Implement Queue using Stack         [Leetcode]                                                                      -   Done
-Implement Stacks using Queue                                                                                        -
+Implement Stacks using Queue        [Leetcode]                                                                      -   Done
 Implement "K" queues in an array                                                                                    -
 Sum of min/max element of all subarray of size "k"                                                                  -
 Number of Recent Calls                                                                                              -
