@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 // Find missing element in an array (range [0,n - 1],as 1 element is missing) containing element from range [1,n].

@@ -2,7 +2,7 @@ Implement Queue using Stack         [Leetcode]                                  
 Implement Stacks using Queue        [Leetcode]                                                                      -   Done
 Implement "K" queues in an array                                                                                    -
 Sum of min/max element of all subarray of size "k"                                                                  -
-Number of Recent Calls                                                                                              -
+Number of Recent Calls              [Leetcode]                                                                      -   Done
 First Unique Character in a String [Already Taught in Queue Class-3 "First non-repeating Character in a stream"]    -
 Number of People Aware of a Secret                                                                                  -
 Find the Winner of the Circular Game                                                                                -
