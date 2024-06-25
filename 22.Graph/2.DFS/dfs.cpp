@@ -17,6 +17,7 @@ using namespace std;
 
     # Note : there is no need of base case in this.
 
+    T.C. : O(v + n), v = vertices ; n = connected edges
 
 */
 

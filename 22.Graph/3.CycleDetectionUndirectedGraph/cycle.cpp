@@ -161,11 +161,12 @@ class Solution {
                 continue;                       // don't check for it's parent
                 
             if(!visited[nbr]){
+                // visit this node
                 bool ans = solveUsingDFS(nbr, visited, adj, src);
                 if(ans == true)
                     return true;
             }
-            else if(visited[nbr] == 1)          // if it is already visited, this means there is a cycle
+            else if(visited[nbr] == 1)          // if this neighbour is already visited, and it is not parent node, this means there is a cycle
                 return true;
         }
         
