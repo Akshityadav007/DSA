@@ -23,9 +23,9 @@ using namespace std;
 // BFS
 /*
     -> In a graph we traverse it's nodes level wise.
-    -> Keep track of nodes we've already visited. (Use a ds)
+    -> Keep track of nodes we've already visited. (Use any DS)
 
-    -> **   We also need to take care of disconnected graph ** 
+    -> ** We also need to take care of disconnected graph ** 
         - To handle this, instead of calling function for only one node (source node), we call it for each node.
 
     -> T.C. : O() || S.C. : O()
@@ -88,11 +88,11 @@ int main(){
 
     // disconnected components
     g.addEdge('a', 'b', 5, 0);
+    g.addEdge('a', 'c', 1, 0);
     g.addEdge('b', 'c', 10, 0);
     
     g.addEdge('d', 'e', 55, 0);
     g.addEdge('f', 'f', 50, 0);
-    
     unordered_map < char , bool > visited;              // to keep track of visited nodes
     for(char node = 'a'; node <= 'f'; node++)
         if(!visited[node])

@@ -35,7 +35,7 @@ using namespace std;
                 - Set the parent of non visited nodes.
             - 2) Using DFS
                 - Keep marking visited nodes and their parents.
-                - If we get a node which is already visited and it's parent is different reutrn false;
+                - If we get a node which is already visited and it's parent is different return false;
 
 */
 
