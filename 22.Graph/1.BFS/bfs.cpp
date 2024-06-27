@@ -28,7 +28,7 @@ using namespace std;
     -> ** We also need to take care of disconnected graph ** 
         - To handle this, instead of calling function for only one node (source node), we call it for each node.
 
-    -> T.C. : O() || S.C. : O()
+    -> T.C. : O(V + E) || S.C. : O(V)
 */
 
 template <typename T>
