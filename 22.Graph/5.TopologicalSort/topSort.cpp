@@ -8,7 +8,7 @@ using namespace std;
 
 
 /*
-    -> A linear ordering of vertices such that  for edge [u -> v], u comes before v  in that ordering.
+    -> This is a linear ordering of vertices such that  for edge [u -> v], u comes before v  in that ordering.
     -> This can only be applied on DAG (Directed acylic graph).
 
     -> We can solve using both DFS and BFS.
@@ -142,12 +142,12 @@ int main(){
     }
 
     cout << "Topological sort : "<< endl;
-    // while(!st.empty()){
-    //     cout << st.top() << endl;
-    //     st.pop();
-    // }
+    while(!st.empty()){
+        cout << st.top() << endl;
+        st.pop();
+    }
 
-    g.topSortBFS(n);
+    // g.topSortBFS(n);
 
     return 0;
 }

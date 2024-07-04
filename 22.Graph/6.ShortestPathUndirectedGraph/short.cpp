@@ -7,8 +7,9 @@
 using namespace std;
 
 /*
-    1) Using BFS
-        -> The node touched for the first time is the shortest path (undirected graph).
+    -> There are several algorithms to find shortest path.
+    1) Using BFS (undirected graph)
+        -> The node touched for the first time is the shortest path.
 
 */
 
