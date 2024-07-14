@@ -35,8 +35,7 @@ using namespace std;
 
     -> Limitations of Dijkstra:
         - Unreachable nodes.
-        - Negative cycle (on adding weight, it becomes -ve).
-        - Negative weights.
+        - Negative cycle (on adding all weight, resultant becomes -ve).
 */
 
 
