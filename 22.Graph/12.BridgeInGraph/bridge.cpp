@@ -4,7 +4,7 @@
 using namespace std;
 
 
-// Bridge in a graph
+// Bridge in a graph || Tarjan's algorithm
 /*
     -> A bridge in a graph is an edge in a graph which if removed will lead to increase in no. of disconnected components.
     ->
