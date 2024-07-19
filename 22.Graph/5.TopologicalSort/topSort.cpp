@@ -37,7 +37,9 @@ using namespace std;
                                 7
         -> The node having indegree = 0 (independent) is to be pushed in the queue.
     
-    -> We can detect cycle in a graph using topological sort using BFS.
+    -> We can detect cycle in a graph using topological sort using BFS - if the no. of total nodes is less than the no. of nodes in topological order.\
+    -> Bascially we keep track of the nodes which will be required to before we visit the current node. Hence, we get the indegree first and then while visiting the current node from a parent node we keep reducing it by 1.
+    -> And the moment indegree becomes 0, that means all the ways/paths which had to be visited before visiting the current node have been traversed, hence we can print the current node.
 */
 
 
@@ -99,7 +101,7 @@ class Graph{
                     q.push(node);
             }
                                  
-            // let's run BFS
+            // let's run BFS algo
             while(!q.empty()){
                 int frontNode = q.front();
                 q.pop();
