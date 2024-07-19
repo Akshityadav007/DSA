@@ -21,6 +21,8 @@ using namespace std;
         - 1) BFS
         - 2) DFS
     
+    -> In a cycle, we traverse it round and round, so there is a visited node which is not the parent node of back - edge node (3 is the back - edge node of 1 in the below graph).
+    
     # 1) Undirected graph
             0 ------ 1 ----- 2 ------ 5
                      |       |
@@ -73,9 +75,8 @@ class Graph{
             }
         }
 
-        bool checkCyclicUndirectedGraphBFS(int src){
+        bool checkCyclicUndirectedGraphBFS(int src, unordered_map<int, bool> &visited){
             queue<int> q;
-            unordered_map<int, bool> visited;
             unordered_map<int, int> parent;             // keep track of parent nodes
 
             // initial state
@@ -134,9 +135,10 @@ class Solution {
         }
         return false;                       // cycle not present
     }
+
     bool isCycle(int V, vector<int> adj[]) {
         unordered_map<int, bool> visited;
-       for(int i = 0;i < V; i++){
+        for(int i = 0;i < V; i++){
            if(!visited[i]){
             bool ans = solveUsingBFS(i, visited, adj);
             if(ans == true)
@@ -175,7 +177,7 @@ class Solution {
     
     bool isCycle(int V, vector<int> adj[]) {
         unordered_map<int, bool> visited;
-       for(int i = 0;i < V; i++){
+        for(int i = 0;i < V; i++){
            if(!visited[i]){
                 int parent = -1;
                 bool ans = solveUsingDFS(i, visited, adj, parent);
@@ -191,11 +193,6 @@ class Solution {
 
 
 
-
-
-
-
-
 int main(){
     Graph<int> g;
     g.addEdge(0,1,0);
@@ -205,7 +202,17 @@ int main(){
     g.addEdge(3,4,0);
     g.addEdge(2,5,0);
 
-    bool isCyclic = g.checkCyclicUndirectedGraphBFS(0);
+    bool isCyclic = false;
+    unordered_map<int, bool> visited;
+
+    // calling for each node to ensure disconnected graphs too get involved, although the main code was meant only for connected graphs.
+    for(int i = 0;i < 5;i++){
+        if(!visited[i]){
+            isCyclic = g.checkCyclicUndirectedGraphBFS(i, visited);
+            if(isCyclic)
+                break;                  // as soon as we get a cycle, we break it.
+        }
+    }
 
     if(isCyclic)
         cout << "Cycle is present!" << endl;

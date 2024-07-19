@@ -22,7 +22,7 @@ using namespace std;
            1 ---> 2
                   ⬇
                   3
-                ↙  ↘
+                ↙  ↖
                4 --> 5
                    ↙  ↘
                   6 --> 7
@@ -33,7 +33,6 @@ using namespace std;
 class Solution {
   public:
     bool checkCyclic(int src, unordered_map<int, bool> &vis, unordered_map<int, bool> &dfsTrack, vector<int> adj[]){
-        
         vis[src] = true;
         dfsTrack[src] = true;
         
@@ -57,6 +56,7 @@ class Solution {
     bool isCyclic(int V, vector<int> adj[]) {
         unordered_map<int, bool> vis;
         unordered_map<int, bool> dfsTrack;
+
         for(int i = 0;i < V; i++){
             if(!vis[i]){
                 bool cyclePresent = checkCyclic(i, vis, dfsTrack, adj);
