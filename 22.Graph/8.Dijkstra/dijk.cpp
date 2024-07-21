@@ -24,7 +24,7 @@ using namespace std;
                         | /           \  |
                         1️⃣ ----- 7 -----2️⃣ 
     
-    -> We need to get shortest path from one given node to another nodes.
+    -> We need to get shortest path from one given node to another node/nodes.
 */
 
 /*
