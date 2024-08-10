@@ -1,8 +1,8 @@
-Prim’s Algorithm for MST
-Kruskal's Algorithm for MST
-Eventual Safe States
-Word Ladder-2
-Minimum Multiplications to reach End
-Number of Operations to Make Network Connected
-Find the City With the Smallest Number of Neighbors at a Threshold Distance
-Accounts Merge
+Prim’s Algorithm for MST                                                        -
+Kruskal's Algorithm for MST                                                     -
+Eventual Safe States                                                            -
+Word Ladder-2                                                                   -
+Minimum Multiplications to reach End                                            -
+Number of Operations to Make Network Connected                                  -
+Find the City With the Smallest Number of Neighbors at a Threshold Distance     -
+Accounts Merge                                                                  -
