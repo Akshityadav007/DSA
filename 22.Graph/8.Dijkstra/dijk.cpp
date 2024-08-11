@@ -84,6 +84,10 @@ class Graph{
                 // remove the top node
                 st.erase(st.begin());
 
+                // if top node already has a shorter path, no need to visit it's neighbours using this path
+                if(topDistance > dist[topNode])
+                    continue;
+
                 // update distance of neighbour
                 for(auto nbr : adj[topNode]){
                     int nbrNode = nbr.first;
