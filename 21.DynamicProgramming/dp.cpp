@@ -11,7 +11,7 @@ using namespace std;
     
     -> It is a technique of problem solving which are of type:
         a) Overlapping sub - problem -> Solving problem which has been solved earlier (didn't store it's result)
-        b) Optimal sub - structure -> When a bigger problem's optlimal solution depends on same type of small problem.
+        b) Optimal sub - structure -> When a bigger problem's optimal solution depends on same type of small problem.
         
         E.g. : Fibonacci number.
 
